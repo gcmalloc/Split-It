@@ -53,12 +53,12 @@ fun! s:splitItColGrid(...)
         " loop to create rows for current column
         for row_i in range(2, num_cols)
             "create row
-            :rightbelow new
+            :rightbelow split
         endfor
         " move to next column
         :wincmd l
         " open window to the right for next col
-        :botright vnew
+        :botright vsplit
     endfor
     " close last uneeded viewport
     :close
